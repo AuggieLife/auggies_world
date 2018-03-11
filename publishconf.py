@@ -11,6 +11,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 SITEURL = 'https://auggielife.github.io/auggies_world'
+#SITEURL = 'https://github.com/AuggieLife/auggies_world'
 RELATIVE_URLS = True
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
