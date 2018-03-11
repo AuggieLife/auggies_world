@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>First Post - Auggie's World</title>
+    <title>Parse a text file into a list of named tuples - Auggie's World</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
 
         <meta property="og:site_name" content="Auggie's World" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="First Post"/>
+        <meta property="og:title" content="Parse a text file into a list of named tuples"/>
         <meta property="og:url" content="./first-post.html"/>
         <meta property="og:description" content="This was brought up on Reddit in LearnPython. The question revolved around parsing a large text file that contained lines that represented an image."/>
         <meta property="article:published_time" content="2018-03-10" />
@@ -87,8 +87,8 @@ Auggie's World            </a>
                 <h1>
                     <a href="./first-post.html"
                        rel="bookmark"
-                       title="Permalink to First Post">
-                        First Post
+                       title="Permalink to Parse a text file into a list of named tuples">
+                        Parse a text file into a list of named tuples
                     </a>
                 </h1>
             </header>
@@ -119,6 +119,7 @@ The question revolved around parsing a large text file that contained lines that
 ...
 I want to go through every line in the text file and add it as a list of tuples (input, output). In addition the "_2" (index value) and "im" need to be removed.</p>
 </blockquote>
+<p>The text file can be found here:  <a href="/contents/code/ocr_train.txt">ocr_train.txt</a></p>
 <p>Lets start by declaring a namedtuple to store the info in and reading the file into a list and checking out what each line looks like.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
 
@@ -131,6 +132,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 </pre></div>
 
 
+<p><strong>Output:</strong></p>
 <div class="highlight"><pre><span></span>[&#39;1\tim00000000000000000000000001110000011111000100011011000011100000011000000110000001100000111000111011111000000000000000000000000000\to\t_\n&#39;]
 </pre></div>
 
@@ -142,6 +144,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 </pre></div>
 
 
+<p><strong>Output:</strong></p>
 <div class="highlight"><pre><span></span><span class="k">[&#39;8&#39;, &#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&#39;, &#39;n&#39;, &#39;_\n&#39;]</span>
 <span class="k">[&#39;9&#39;, &#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&#39;, &#39;g&#39;, &#39;_\n&#39;]</span>
 <span class="k">[&#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;\n&#39;]</span>
@@ -155,6 +158,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 </pre></div>
 
 
+<p><strong>Output:</strong></p>
 <div class="highlight"><pre><span></span><span class="k">[&#39;8&#39;, &#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&#39;, &#39;n&#39;, &#39;&#39;]</span>
 <span class="k">[&#39;9&#39;, &#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&#39;, &#39;g&#39;, &#39;&#39;]</span>
 <span class="k">[&#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;]</span>
@@ -168,6 +172,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 </pre></div>
 
 
+<p><strong>Output:</strong></p>
 <div class="highlight"><pre><span></span><span class="k">[&#39;8&#39;, &#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&#39;, &#39;n&#39;]</span>
 <span class="k">[&#39;9&#39;, &#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&#39;, &#39;g&#39;]</span>
 <span class="k">[]</span>
@@ -183,6 +188,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 </pre></div>
 
 
+<p><strong>Output:</strong></p>
 <div class="highlight"><pre><span></span>LetterData(input=&#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&#39;, output=&#39;n&#39;)
 LetterData(input=&#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&#39;, output=&#39;g&#39;)
 LetterData(input=&#39;im00000000000000000000000001110000011111000100011011000011100000011000000110000001100000111000111011111000000000000000000000000000&#39;, output=&#39;o&#39;)
@@ -194,10 +200,31 @@ LetterData(input=&#39;im00000000010000000110000001110000010110000110100000101100
 LetterData(input=&#39;im00001100000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000010000001100000010000000100000&#39;, output=&#39;i&#39;)
 LetterData(input=&#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&#39;, output=&#39;n&#39;)
 </pre></div>
+
+
+<p><strong>After all that our finished script looks like…</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="n">tup_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">LetterData</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;LetterData&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">])</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;ocr_train.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">elements</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;_</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">elements</span><span class="p">:</span>
+        <span class="n">tup_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LetterData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="n">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;im&#39;</span><span class="p">),</span> <span class="n">output</span><span class="o">=</span><span class="n">elements</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="o">*</span><span class="n">tup_list</span><span class="p">[:</span><span class="mi">10</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
             </div>
             <!-- /.entry-content -->
 <section class="well" id="related-posts">
     <h4>Part 1 of the r/learnpython series</h4>
+       <h5>Next articles</h5>
+       <ul>
+           <li><a href="./second-post.html">Playing With Markdown</a></li>
+       </ul>
 </section>
         </article>
     </section>
@@ -223,8 +250,11 @@ LetterData(input=&#39;im00000000000000000000000000000000000011110011100100100001
 <li class="list-group-item">
   <a href="./"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
   <ul class="list-group " id="tags">
-    <li class="list-group-item tag-4">
+    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/markdown.html">markdown</a>
     </li>
   </ul>
 </li>

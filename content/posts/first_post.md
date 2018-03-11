@@ -1,4 +1,4 @@
-Title: First Post
+Title: Parse a text file into a list of named tuples
 Date: 2018-03-10 17:07
 Modified: 2018-03-10 17:07
 Status: published
@@ -20,6 +20,8 @@ To Quote:
 > ...
 >I want to go through every line in the text file and add it as a list of tuples (input, output). In addition the "_2" (index value) and "im" need to be removed.
 
+The text file can be found here:  [ocr_train.txt](/contents/code/ocr_train.txt)
+
 Lets start by declaring a namedtuple to store the info in and reading the file into a list and checking out what each line looks like.
 
 
@@ -33,6 +35,7 @@ with open('ocr_train.txt') as f:
     text = list(f)
 print (text[:1])
 ```
+**Output:**
 
     ['1\tim00000000000000000000000001110000011111000100011011000011100000011000000110000001100000111000111011111000000000000000000000000000\to\t_\n']
 
@@ -45,6 +48,7 @@ for line in text[7:10]:
     elements = line.split('\t')
     print(elements)
 ```
+**Output:**
 
     ['8', 'im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000', 'n', '_\n']
     ['9', 'im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100', 'g', '_\n']
@@ -59,6 +63,7 @@ for line in text[7:10]:
     elements = line.strip('_\n').split('\t')
     print(elements)
 ```
+**Output:**
 
     ['8', 'im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000', 'n', '']
     ['9', 'im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100', 'g', '']
@@ -73,6 +78,7 @@ for line in text[7:10]:
     elements = list(filter(None, line.strip('_\n').split('\t')))
     print(elements)
 ```
+**Output:**
 
     ['8', 'im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000', 'n']
     ['9', 'im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100', 'g']
@@ -89,6 +95,7 @@ for line in text:
         tup_list.append(LetterData(input=elements[1].strip('im'), output=elements[2]))
 print (*tup_list[:10], sep='\n')
 ```
+**Output:**
 
     LetterData(input='im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000', output='n')
     LetterData(input='im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100', output='g')
@@ -100,3 +107,21 @@ print (*tup_list[:10], sep='\n')
     LetterData(input='im00000000010000000110000001110000010110000110100000101100001001100011001000010010011100101101011010011100101110011110111100000000', output='d')
     LetterData(input='im00001100000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000010000001100000010000000100000', output='i')
     LetterData(input='im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000', output='n')
+
+**After all that our finished script looks like…**
+
+```python
+from collections import namedtuple
+
+tup_list = []
+LetterData = namedtuple('LetterData', ['input', 'output'])
+
+with open('ocr_train.txt') as f:
+    text = list(f)
+
+for line in text:
+    elements = list(filter(None, line.strip('_\n').split('\t')))
+    if elements:
+        tup_list.append(LetterData(input=elements[1].strip('im'), output=elements[2]))
+print(*tup_list[:10], sep='\n')
+```

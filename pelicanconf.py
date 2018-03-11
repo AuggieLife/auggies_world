@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Dale Appleby'
 SITENAME = "Auggie's World"
 SITEURL = 'https://auggielife.github.io/auggies_world'
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # Paths
 PATH = 'content'
@@ -66,10 +66,10 @@ EXTRA_PATH_METADATA = {
 }
 
 # for Tique Search Plugin
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories',
+                    'authors', 'archives', 'search')
 
 I18N_TEMPLATES_LANG = 'en'
-
 
 
 # Uncomment following line if you want document-relative URLs when developing
