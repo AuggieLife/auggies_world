@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Auggie's World</title><link href="https://github.com/AuggieLife/auggies_world.git/" rel="alternate"></link><link href="https://github.com/AuggieLife/auggies_world.git/feeds/all.atom.xml" rel="self"></link><id>https://github.com/AuggieLife/auggies_world.git/</id><updated>2018-03-10T17:07:00-08:00</updated><entry><title>First Post</title><link href="https://github.com/AuggieLife/auggies_world.git/first-post.html" rel="alternate"></link><published>2018-03-10T17:07:00-08:00</published><updated>2018-03-10T17:07:00-08:00</updated><author><name>Dale Appleby</name></author><id>tag:github.com,2018-03-10:/AuggieLife/auggies_world.git/first-post.html</id><summary type="html">&lt;p&gt;This is a summary of the first post&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the very first post&lt;/p&gt;</content><category term="python"></category><category term="markdown"></category><category term="blog"></category></entry><entry><title>Fourth Post - Part 4</title><link href="https://github.com/AuggieLife/auggies_world.git/fourth-post.html" rel="alternate"></link><published>2017-11-30T12:40:00-08:00</published><updated>2017-11-30T12:40:00-08:00</updated><author><name>Peter D. Kazarinoff</name></author><id>tag:github.com,2017-11-30:/AuggieLife/auggies_world.git/fourth-post.html</id><summary type="html">&lt;p&gt;This is the fourth post of a series of posts. It will demonstrate tables.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the fourth post of a series of posts. It will demonstrate tables.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column Header&lt;/th&gt;
+&lt;th&gt;Column Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Row 1&lt;/td&gt;
+&lt;td&gt;Data 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Row 2&lt;/td&gt;
+&lt;td&gt;Data 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="python"></category><category term="pelican"></category><category term="blog"></category><category term="tables"></category></entry><entry><title>Second Post - Part 2</title><link href="https://github.com/AuggieLife/auggies_world.git/second-post.html" rel="alternate"></link><published>2017-11-30T12:40:00-08:00</published><updated>2017-11-30T12:40:00-08:00</updated><author><name>Peter D. Kazarinoff</name></author><id>tag:github.com,2017-11-30:/AuggieLife/auggies_world.git/second-post.html</id><summary type="html">&lt;p&gt;This is the second post of a series of posts. It will show series and an embeded youtube video.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the second post of a series of posts. It will show series and an embedded youtube video.&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/https://youtu.be/gHQg5OD3JqU'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;</content><category term="python"></category><category term="pelican"></category><category term="blog"></category></entry></feed>
