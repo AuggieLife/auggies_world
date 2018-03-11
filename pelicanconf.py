@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Dale Appleby'
 SITENAME = "Auggie's World"
-SITEURL = ''
+SITEURL = 'https://github.com/AuggieLife/auggies_world'
 
 # Paths
 PATH = 'content'
@@ -72,4 +72,4 @@ I18N_TEMPLATES_LANG = 'en'
 
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
