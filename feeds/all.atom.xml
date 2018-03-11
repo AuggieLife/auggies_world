@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Auggie's World</title><link href="https://auggielife.github.io/auggies_world/" rel="alternate"></link><link href="https://auggielife.github.io/auggies_world/feeds/all.atom.xml" rel="self"></link><id>https://auggielife.github.io/auggies_world/</id><updated>2018-03-10T17:07:00-08:00</updated><entry><title>First Post</title><link href="https://auggielife.github.io/auggies_world/first-post.html" rel="alternate"></link><published>2018-03-10T17:07:00-08:00</published><updated>2018-03-10T17:07:00-08:00</updated><author><name>Dale Appleby</name></author><id>tag:auggielife.github.io,2018-03-10:/auggies_world/first-post.html</id><summary type="html">&lt;p&gt;This was brought up on Reddit in LearnPython.  The question revolved around parsing a large text file that contained lines that represented an image.&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Parse a text file into a list of named tuples&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Auggie's World</title><link href="https://auggielife.github.io/auggies_world/" rel="alternate"></link><link href="https://auggielife.github.io/auggies_world/feeds/all.atom.xml" rel="self"></link><id>https://auggielife.github.io/auggies_world/</id><updated>2018-03-10T17:07:00-08:00</updated><entry><title>Parse a text file into a list of named tuples</title><link href="https://auggielife.github.io/auggies_world/first-post.html" rel="alternate"></link><published>2018-03-10T17:07:00-08:00</published><updated>2018-03-10T17:07:00-08:00</updated><author><name>Dale Appleby</name></author><id>tag:auggielife.github.io,2018-03-10:/auggies_world/first-post.html</id><summary type="html">&lt;p&gt;This was brought up on Reddit in LearnPython.  The question revolved around parsing a large text file that contained lines that represented an image.&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Parse a text file into a list of named tuples&lt;/h3&gt;
 &lt;p&gt;This was brought up on Reddit in LearnPython.  The original post can be found here at this &lt;a href="https://redd.it/822956"&gt;Reddit Link&lt;/a&gt;.
 The question revolved around parsing a large text file that contained lines that represented an image.&lt;/p&gt;
 &lt;p&gt;To Quote:&lt;/p&gt;
@@ -8,6 +8,7 @@ The question revolved around parsing a large text file that contained lines that
 ...
 I want to go through every line in the text file and add it as a list of tuples (input, output). In addition the "_2" (index value) and "im" need to be removed.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;The text file can be found here:  &lt;a href="/contents/code/ocr_train.txt"&gt;ocr_train.txt&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Lets start by declaring a namedtuple to store the info in and reading the file into a list and checking out what each line looks like.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;
 
@@ -20,6 +21,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[&amp;#39;1\tim00000000000000000000000001110000011111000100011011000011100000011000000110000001100000111000111011111000000000000000000000000000\to\t_\n&amp;#39;]
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -31,6 +33,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[&amp;#39;8&amp;#39;, &amp;#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&amp;#39;, &amp;#39;n&amp;#39;, &amp;#39;_\n&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[&amp;#39;9&amp;#39;, &amp;#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&amp;#39;, &amp;#39;g&amp;#39;, &amp;#39;_\n&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[&amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;\n&amp;#39;]&lt;/span&gt;
@@ -44,6 +47,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[&amp;#39;8&amp;#39;, &amp;#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&amp;#39;, &amp;#39;n&amp;#39;, &amp;#39;&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[&amp;#39;9&amp;#39;, &amp;#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&amp;#39;, &amp;#39;g&amp;#39;, &amp;#39;&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[&amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;&amp;#39;]&lt;/span&gt;
@@ -57,6 +61,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[&amp;#39;8&amp;#39;, &amp;#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&amp;#39;, &amp;#39;n&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[&amp;#39;9&amp;#39;, &amp;#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&amp;#39;, &amp;#39;g&amp;#39;]&lt;/span&gt;
 &lt;span class="k"&gt;[]&lt;/span&gt;
@@ -72,6 +77,7 @@ I want to go through every line in the text file and add it as a list of tuples 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;LetterData(input=&amp;#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&amp;#39;, output=&amp;#39;n&amp;#39;)
 LetterData(input=&amp;#39;im01111000110000001000000010000000111111110000000100000001000000010000000100000001000000010000000100000011000001100000010000000100&amp;#39;, output=&amp;#39;g&amp;#39;)
 LetterData(input=&amp;#39;im00000000000000000000000001110000011111000100011011000011100000011000000110000001100000111000111011111000000000000000000000000000&amp;#39;, output=&amp;#39;o&amp;#39;)
@@ -82,4 +88,26 @@ LetterData(input=&amp;#39;im0000000000000000000000000000000000001110000110100011
 LetterData(input=&amp;#39;im00000000010000000110000001110000010110000110100000101100001001100011001000010010011100101101011010011100101110011110111100000000&amp;#39;, output=&amp;#39;d&amp;#39;)
 LetterData(input=&amp;#39;im00001100000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000010000001100000010000000100000&amp;#39;, output=&amp;#39;i&amp;#39;)
 LetterData(input=&amp;#39;im00000000000000000000000000000000000011110011100100100001011000011100000110000001100000011000000100000000000000000000000000000000&amp;#39;, output=&amp;#39;n&amp;#39;)
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;After all that our finished script looks like…&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;
+
+&lt;span class="n"&gt;tup_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;LetterData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;LetterData&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;input&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;output&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ocr_train.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;elements&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;_&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;tup_list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LetterData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;im&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;tup_list&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>Playing With Markdown</title><link href="https://auggielife.github.io/auggies_world/second-post.html" rel="alternate"></link><published>2018-03-10T17:07:00-08:00</published><updated>2018-03-10T17:07:00-08:00</updated><author><name>Dale Appleby</name></author><id>tag:auggielife.github.io,2018-03-10:/auggies_world/second-post.html</id><summary type="html">&lt;p&gt;Just playing with markdown&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; Hello
+&lt;/pre&gt;&lt;/div&gt;</content><category term="markdown"></category><category term="python"></category></entry></feed>
