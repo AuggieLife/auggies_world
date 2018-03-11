@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>blog - Auggie's World</title>
+    <title>Fourth Post - Part 4 - Auggie's World</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,24 @@
 
 
 
+<link rel="canonical" href="/fourth-post.html">
 
-    <meta name="author" content="Dale Appleby" />
-    <meta name="keywords" content="blog" />
+        <meta name="author" content="Peter D. Kazarinoff" />
+        <meta name="keywords" content="python,pelican,blog,tables" />
+        <meta name="description" content="This is the fourth post of a series of posts. It will demonstrate tables." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Auggie's World" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Auggie's World"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Auggie's World"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Fourth Post - Part 4"/>
+        <meta property="og:url" content="/fourth-post.html"/>
+        <meta property="og:description" content="This is the fourth post of a series of posts. It will demonstrate tables."/>
+        <meta property="article:published_time" content="2017-11-30" />
+            <meta property="article:section" content="example posts" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="pelican" />
+            <meta property="article:tag" content="blog" />
+            <meta property="article:tag" content="tables" />
+            <meta property="article:author" content="Peter D. Kazarinoff" />
 
 
 
@@ -52,7 +60,7 @@ Auggie's World            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="/category/example-posts.html">Example posts</a>
                         </li>
                         <li >
@@ -75,27 +83,71 @@ Auggie's World            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="/first-post.html">First Post</a></h2>
-                <div class="summary"><p>This is a summary of the first post</p>
-                    <a class="btn btn-default btn-xs" href="/first-post.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/fourth-post.html"
+                       rel="bookmark"
+                       title="Permalink to Fourth Post - Part 4">
+                        Fourth Post - Part 4
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-11-30T12:40:00-08:00"> Thu 30 November 2017</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/pelican.html">pelican</a>
+        /
+	<a href="/tag/blog.html">blog</a>
+        /
+	<a href="/tag/tables.html">tables</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/fourth-post.html">Fourth Post - Part 4</a></h2>
-                <div class="summary"><p>This is the fourth post of a series of posts. It will demonstrate tables.</p>
-                    <a class="btn btn-default btn-xs" href="/fourth-post.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/second-post.html">Second Post - Part 2</a></h2>
-                <div class="summary"><p>This is the second post of a series of posts. It will show series and an embeded youtube video.</p>
-                    <a class="btn btn-default btn-xs" href="/second-post.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+                <p>This is the fourth post of a series of posts. It will demonstrate tables.</p>
+<table>
+<thead>
+<tr>
+<th>Column Header</th>
+<th>Column Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row 1</td>
+<td>Data 1</td>
+</tr>
+<tr>
+<td>Row 2</td>
+<td>Data 2</td>
+</tr>
+</tbody>
+</table>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Part 2 of the example-post-series series</h4>
+       <h5>Previous articles</h5>
+       <ul>
+           <li><a href="/second-post.html">Second Post - Part 2</a></li>
+       </ul>
+</section>
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">

@@ -5,6 +5,8 @@ Status: published
 Category: This site
 Tags: python, markdown, blog
 Slug: first-post
+Series: example-post-series
+Series_index: 1
 Author: Dale Appleby
 Summary: This is a summary of the first post
 

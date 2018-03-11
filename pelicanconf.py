@@ -37,7 +37,28 @@ BOOTSTRAP_THEME = 'flatly'
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGINS = [
-    'i18n_subsites']
+    'i18n_subsites',
+    'series',
+    'tag_cloud',
+    'liquid_tags.youtube',
+    'tipue_search',
+    'liquid_tags.include_code',
+    'render_math',
+    'pelican-ipynb.markup'
+]
+
+CUSTOM_CSS = 'static/css/custom.css'
+CUSTOM_JS = 'static/js/custom.js'
+
+STATIC_PATHS = ['extra']
+
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/css/custom.css'},
+    'extra/custom.js': {'path': 'static/js/custom.js'}
+}
+
+# for Tique Search Plugin
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
 
 I18N_TEMPLATES_LANG = 'en'
 
