@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Dale Appleby'
 SITENAME = "Auggie's World"
-SITEURL = 'https://auggielife.github.io/auggies_world/'
+SITEURL = 'https://auggielife.github.io/auggies_world'
 
 # Paths
 PATH = 'content'
